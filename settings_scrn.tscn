@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://c8ck6s5a25qdy"]
+
+[ext_resource type="Script" uid="uid://byx4trnhq7n0d" path="res://settings_scn.gd" id="1_w40ru"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w40ru"]
+font_size = 35
+
+[node name="settings_scn" type="Node2D" unique_id=1897978722]
+script = ExtResource("1_w40ru")
+
+[node name="Label" type="Label" parent="." unique_id=1105271363]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 476.0
+offset_top = 246.0
+offset_right = 749.0
+offset_bottom = 299.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_w40ru")
+
+[node name="back" type="Button" parent="." unique_id=279733074]
+offset_left = 458.0
+offset_top = 340.0
+offset_right = 775.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

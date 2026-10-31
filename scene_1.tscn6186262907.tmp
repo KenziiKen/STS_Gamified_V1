@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dgni1wwb0asgk"]
+
+[ext_resource type="Script" uid="uid://b12s4drd18wrd" path="res://scene_1.gd" id="1_3sd7o"]
+[ext_resource type="PackedScene" uid="uid://ds6v555q446l3" path="res://map.tscn" id="2_1abo5"]
+[ext_resource type="PackedScene" uid="uid://bbtlauelppir7" path="res://character_sprite.tscn" id="2_3xosi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_icno0"]
+font_size = 35
+
+[node name="scene_1" type="Node2D" unique_id=170204933]
+script = ExtResource("1_3sd7o")
+
+[node name="map" parent="." unique_id=1998654681 instance=ExtResource("2_1abo5")]
+
+[node name="back" type="Button" parent="." unique_id=1571009483]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = 574.0
+offset_right = 254.0
+offset_bottom = 625.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 30
+text = "BACK"
+
+[node name="Label" type="Label" parent="." unique_id=735880706]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 36.0
+offset_top = 496.0
+offset_right = 264.0
+offset_bottom = 574.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+label_settings = SubResource("LabelSettings_icno0")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Character_Sprite" parent="." unique_id=1948418954 instance=ExtResource("2_3xosi")]
+position = Vector2(-445, -16)
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

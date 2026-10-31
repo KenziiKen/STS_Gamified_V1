@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c2vmlagrplgm0"]
+
+[ext_resource type="PackedScene" uid="uid://ds6v555q446l3" path="res://map.tscn" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://bbtlauelppir7" path="res://character_sprite.tscn" id="2_epypp"]
+
+[node name="Node2D" type="Node2D" unique_id=1928298414]
+
+[node name="map" parent="." unique_id=1998654681 instance=ExtResource("1_0e48y")]
+position = Vector2(-23, -2)
+script = null
+
+[node name="Character_Sprite" parent="." unique_id=1948418954 instance=ExtResource("2_epypp")]
+position = Vector2(-522, -9)
+script = null
